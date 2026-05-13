@@ -1,0 +1,42 @@
+<div class="modal-backdrop">
+
+  <div class="modal-box">
+
+    <div class="modal-header">
+      <h2>Add User</h2>
+
+      <span class="close-btn" (click)="closeModal()">
+        ×
+      </span>
+    </div>
+
+    <form [formGroup]="userForm">
+
+      <input
+        type="text"
+        placeholder="Enter Name"
+        formControlName="name"
+      />
+
+      <input
+        type="email"
+        placeholder="Enter Email"
+        formControlName="email"
+      />
+
+      <select formControlName="role">
+        <option value="">Select Role</option>
+        <option value="Admin">Admin</option>
+        <option value="Editor">Editor</option>
+        <option value="Viewer">Viewer</option>
+      </select>
+
+      <button type="button" (click)="submitForm()">
+        Submit
+      </button>
+
+    </form>
+
+  </div>
+
+</div>

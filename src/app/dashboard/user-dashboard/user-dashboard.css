@@ -1,0 +1,44 @@
+.container {
+  padding: 30px;
+}
+
+button {
+  background-color: #1c4980;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  height: 48px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+}
+
+th {
+  background: #383838;
+  color: white;
+  padding: 16px;
+  text-align: left;
+}
+
+td {
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+canvas {
+  max-width: 500px;
+  max-height: 500px;
+  margin: 40px auto;
+  display: block;
+} 
+.chart-container{
+  width: 500px;
+  margin: auto;
+}

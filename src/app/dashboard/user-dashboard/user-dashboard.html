@@ -1,0 +1,32 @@
+<div class="container">
+
+  <button (click)="showModal=true">
+    Add User
+  </button>
+
+  <table>
+
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+    </tr>
+
+    <tr *ngFor="let user of users">
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.role}}</td>
+    </tr>
+
+  </table>
+
+  <div class="chart-container">
+  <canvas id="myChart"></canvas>
+</div>
+<app-user-form
+  *ngIf="showModal"
+  (addUser)="addUser($event)"
+  (close)="showModal = false">
+</app-user-form>
+
+</div>
