@@ -1,24 +1,27 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private usersSubject = new BehaviorSubject<User[]>([
+  private users = new BehaviorSubject<any[]>([
     {
-      name: 'Deepti',
+      name: 'Deepti Verma',
       email: 'deepti@gmail.com',
       role: 'Admin'
     }
   ]);
 
-  users$ = this.usersSubject.asObservable();
+  users$ = this.users.asObservable();
 
-  addUser(user: User) {
-    const currentUsers = this.usersSubject.value;
-    this.usersSubject.next([...currentUsers, user]);
+  addUser(user: any) {
+
+    const currentUsers = this.users.value;
+
+    this.users.next([...currentUsers, user]);
+
   }
+
 }
